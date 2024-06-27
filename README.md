@@ -1,5 +1,5 @@
 ## Example
-[https://github.com/imnotniki/polybarPopup/blob/main/example.gif](https://raw.githubusercontent.com/imnotniki/polybarPopup/main/example.gif)
+![](https://raw.githubusercontent.com/imnotniki/polybarPopup/main/example.gif)
 
 ## Requirements
 
