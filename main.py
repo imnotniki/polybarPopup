@@ -61,10 +61,18 @@ def draw_on_desktop():
 
     overlay.map()
 
-    gc = overlay.create_gc(foreground=d.screen().black_pixel)
+
     shananiki = check_website_status("https://shananiki.org")
+    gc = overlay.create_gc(foreground=d.screen().black_pixel)
+
+    gc_red = overlay.create_gc(foreground=d.screen().default_colormap.alloc_color(red=65535, green=0, blue=0).pixel)
+    gc_green = overlay.create_gc(foreground=d.screen().default_colormap.alloc_color(red=0, green=65535, blue=0).pixel)
+
     drawText(overlay, gc, 10, 10, "Shananiki:")
-    drawText(overlay, gc, 80, 10, shananiki)
+    if shananiki == "ONLINE":
+        drawText(overlay, gc_green, 80, 10, shananiki)
+    else:
+        drawText(overlay, gc_red, 80, 10, shananiki)
     d.flush()
 
     time.sleep(2)
