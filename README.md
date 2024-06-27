@@ -14,7 +14,7 @@
 sudo pacman -S python-xlib python-requests
 ```
 ```bash
-sudo yay -S pyautogui
+yay -S pyautogui
 ```
 **Install polybar:**
 ```bash
